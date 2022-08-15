@@ -2,8 +2,7 @@ import os, requests
 from flask import Flask, make_response, redirect
 app = Flask("44html's wildcard system")
 app.config["SERVER_NAME"] = "44ht.ml"
-home  = "https://44html.sape.gq/"
-depot = "https://44html.sape.gq/"
+home = "https://44html.sape.gq/"
 
 @app.route("/<root>")
 def root(root): return redirect(f"{home}{root}")
@@ -24,7 +23,7 @@ def rooms(user, filename):
 
 @app.route("/", subdomain="<user>")
 def roomhome(user):
-  c = requests.post(f"{home}/~{user}/", data={"key": os.getenv("KEY")})
+  c = requests.post(f"{home}~{user}/", data={"key": os.getenv("KEY")})
   r = make_response(c.text, c.status_code)
   r.headers["content-type"] = c.headers["content-type"]
   return r
