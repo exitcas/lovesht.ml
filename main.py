@@ -9,9 +9,9 @@ def root(root): return redirect(f"{home}{root}")
 @app.route("/<root>", subdomain="www")
 def rootwww(): return root(root)
 @app.route("/")
-def home(): return redirect(home)
+def main(): return redirect(home)
 @app.route("/", subdomain="www")
-def homewww(): return home()
+def mainwww(): return home()
 
 
 @app.route("/<filename>", subdomain="<user>")
