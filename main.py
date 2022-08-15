@@ -17,5 +17,3 @@ def roomhomesd(user):
   r = make_response(c.text), c.status_code
   r.headers["content-type"] = c.headers["content-type"]
   return r
-
-app.run(host="0.0.0.0")
