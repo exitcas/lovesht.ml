@@ -1,7 +1,7 @@
 import os, requests
 from flask import Flask, make_response, redirect
 app = Flask("44html's wildcard system")
-app.config["SERVER_NAME"] = "44ht.ml"
+app.config["SERVER_NAME"] = "lovesht.ml"
 home = "https://44html.sape.gq/"
 
 @app.route("/<root>")
